@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ReNewMart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+    }
+    header {
+      background: #343a40;
+      color: white;
+      padding: 1rem 2rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-container {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+    }
+    .logo-container img {
+      height: 60px;
+    }
+    .title-container h1 {
+      color: yellow;
+      font-size: 2rem;
+    }
+
+    nav {
+      background: #212529;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      padding: 5px;
+    }
+    .search-container input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      width: 250px;
+    }
+    .search-container button {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #28a745;
+      background-color: #28a745;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+    .search-container button:hover {
+      background-color: #218838;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      background: #e9ecef;
+      padding: 1rem;
+    }
+    .carousel div {
+      min-width: 250px;
+      background: white;
+      margin-right: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .carousel img {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .contact, .review, .payment, .message, .follow {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      background: #343a40;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+  <script>
+    function handleSearch() {
+      const query = document.getElementById("searchInput").value;
+      alert("You searched for: " + query);
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlSGrGV7yhV5LMV850QxXy9aUgBK4Stvq8cw&s" alt="ReNewMart Logo" />
+    </div>
+    <div class="title-container">
+      <h1>ReNewMart</h1>
+        <h5>"Give Items a Second Chance at Life!"</h5>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#review">Reviews</a>
+    <a href="#payment">Payments</a>
+    <a href="#message">Message</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search here..." />
+    <button onclick="handleSearch()">Search</button>
+  </div>
+
+  <section id="home">
+    <h2>Features of Mart</h2>
+    <div class="carousel">
+      <div><h3>Clothing</h3><p>Discover stylish second-hand clothing at unbeatable prices – fashion that’s affordable and sustainable!</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLxclgjZzAFB7mgd0pvGHg0um5Xd_ZmaV20Q&s"/></div>
+      <div><h3>Text Books</h3><p>Find affordable second-hand school textbooks – perfect condition, pocket-friendly, and ready to learn!</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5xgDr3E_HNY6ldUSB4Ha8Xsq0kpsGJjPmzw&s"/></div>
+      <div><h3>Competitive Exam Guides</h3><p>Get second-hand competitive exam guides at low prices – crack exams without cracking your budget!</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8zrl6GOpQrQlje9JRcMCQokjPbmMEdGW0AA&s"/></div>
+      <div><h3>Electronics</h3><p>Buy reliable second-hand electronics at budget-friendly rates – tested, trusted, and tech-ready!</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToiFXPEjspzz6iKaAP4f3ydzAFYresNfWmuw&s"/></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>ReNewMart is your one-stop destination for buying and selling second-hand items at affordable prices. Our mission is to promote smart savings and sustainable living.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: ReNewmart@gmail.com</p>
+    <p>Phone: 9182333930</p>
+    <p>Address: 123 Green Street, Freshville, FM 45678</p>
+    <p>Store Hours: Mon–Sat: 8:00 AM – 9:00 PM | Sun: 9:00 AM – 6:00 PM</p>
+  </section>
+
+  <section id="review" class="review">
+    <h2>Customer Reviews</h2>
+    <p>"Great platform to find textbooks at low cost!" – Ravi K.</p>
+    <p>"I sold my old books easily through Books Hub." – Sneha M.</p>
+  </section>
+
+  <section id="message" class="message">
+    <h2>Message</h2>
+    <p>Have questions or need help? Start a chat with us — we’re here to support you with buying, selling, or anything else you need!</p>
+    <div>
+      <a href="https://whatsapp.com/YourPage" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH0X6rcjMHIFq8l57tHSo2LxAP3_PCthBosg&s" alt="Whatsapp" width="40"></a>
+      <a href="https://instagram.com/YourPage" target="_blank">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.JtmXSh_uyZBaTg1eXd-NtgHaHa&pid=Api&P=0&h=180" alt="Instagram" width="40"></a>
+    </div>
+  </section>
+
+  <section id="payment" class="payment">
+    <h2>Payments</h2>
+    <p>We accept:</p>
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.G5Fk5mZGlhgNC7wNqCe7HQHaHa&pid=Api&P=0&h=180" alt="PhonePe" width="100" />
+      <img src="https://tse4.mm.bing.net/th?id=OIP.jMhj_X_ez3BeEK04KyLnZgHaHa&pid=Api&P=0&h=180" alt="Google Pay" width="60" />
+      <img src="https://tse4.mm.bing.net/th?id=OIP.x0zf9xSUiWGweUay3cLSVQHaHa&pid=Api&P=0&h=180" alt="Paytm" width="100" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="100" />
+    </div>
+  </section>
+
+  <section id="social-media" class="follow">
+    <h2>Follow Us on Social Media</h2>
+    <p>Stay connected for the latest offers, updates, and tips!</p>
+    <div style="margin-top: 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+      <a href="https://instagram.com/YourPage" target="_blank">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.JtmXSh_uyZBaTg1eXd-NtgHaHa&pid=Api&P=0&h=180 alt="Instagram" width="40">
+      </a>
+
+
+      <a href="https://facebook.com/YourPage" target="_blank">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.B1hpCXHYUBPSso6W4q9XpgHaHa&pid=Api&P=0&h=180" alt="Facebook" width="40">
+      </a>
+      <a href="https://twitter.com/YourPage" target="_blank">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.HOXFpdfP03VBY3yooSei9AHaHa&pid=Api&P=0&h=180" alt="Twitter" width="40">
+      </a>
+      <a href="https://youtube.com/YourPage" target="_blank">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.kA13Itmxev0ytEqrJf_f1gHaHa&pid=Api&P=0&h=180" alt="YouTube" width="40">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ReNewMart. All rights reserved.</p>
+  </footer>
+
+
+</body>
+</html>
